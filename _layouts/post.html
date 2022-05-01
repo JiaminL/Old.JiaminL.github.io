@@ -22,11 +22,6 @@ tail_includes:
         width="{{ page.image.w }}" {% endif %} {% if page.image.height %} height="{{ page.image.height }}" {% elsif
         page.image.h %} height="{{ page.image.h }}" {% endif %}
         style="webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,.1));filter: drop-shadow(0px 0px 10px rgba(0,0,0,.1))">
-
-    <!-- {% if page.image.alt %}
-    <figcaption class="pt-2 pb-2">▲ {{ page.image.alt }}</figcaption>
-    {% endif %} -->
-
 </div>
 {% endif %}
 
@@ -36,22 +31,21 @@ tail_includes:
     <!-- published date -->
     <span>
         {{ site.data.locales[lang].post.posted }}
-        {% include datetime.html date=page.date tooltip=true %}
+        {% include timeago.html date=page.date tooltip=true %}
     </span>
 
     <!-- lastmod date -->
     {% if page.last_modified_at %}
     <span>
         {{ site.data.locales[lang].post.updated }}
-        {% include datetime.html date=page.last_modified_at tooltip=true %}
+        {% include timeago.html date=page.last_modified_at tooltip=true %}
     </span>
     {% endif %}
 
     <div class="d-flex justify-content-between">
         <!-- author -->
         <span>
-            {% capture author_name %}{{ site.data.authors[page.author].name | default: site.social.name }}{% endcapture
-            %}
+            {% capture author_name %}{{ site.data.authors[page.author].name | default: site.social.name }}{%endcapture%}
             {% assign author_link = nil %}
 
             {% if page.author %}
@@ -64,7 +58,7 @@ tail_includes:
 
             <em>
                 {% if author_link %}
-                <a href="{{ author_link }}">{{ author_name }}</a>
+                <a href="{{ author_link }}" target="_blank">{{ author_name }}</a>
                 {% else %}
                 {{ author_name }}
                 {% endif %}

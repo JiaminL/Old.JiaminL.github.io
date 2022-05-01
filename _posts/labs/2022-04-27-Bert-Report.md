@@ -1,7 +1,7 @@
 ---
 title: BERT 实验记录
 layout: post
-author: Jiamin Lu
+author: jiamin
 categories: [Laboratory, Deep Learning]
 tags: [BERT]
 math: true
