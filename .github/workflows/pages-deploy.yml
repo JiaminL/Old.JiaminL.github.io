@@ -25,5 +25,19 @@ jobs:
           ruby-version: 2.7
           bundler-cache: true
 
+      - name: Build
+        env:
+          JEKYLL_ENV: production
+        run:
+          bundle exec jekyll build -d _site/
+
       - name: Deploy
-        run: bash tools/deploy.sh
+        run: |
+          cd _site/
+          git init
+          git add -A
+          git -c user.name=GitHub \
+              -c user.email=noreply.github.com \
+              commit -m "Auto deploy from GitHub Actions run $GITHUB_RUN_NUMBER"
+          git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push origin +HEAD:gh-pages
