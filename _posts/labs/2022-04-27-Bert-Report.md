@@ -3,18 +3,15 @@ title: BERT 实验记录
 layout: post
 author: jiamin
 categories: [Laboratory, Deep Learning]
-tags: [BERT]
+tags: [Deep Learning, BERT]
 math: true
-last_modified_at: 2022-04-27 11:33:00 +0800
-excerpt: 将 BERT 模型对 CoLA 任务进行微调训练，获取在不同 Batch size 下，微调任务每 Epoch 所用时间与 GPU 占用情况。
+abstract: 将 BERT 模型对 CoLA 任务进行微调训练，获取在不同 Batch size 下，微调任务每 Epoch 所用时间与 GPU 占用情况。
 image:
   path: /lab/bert/google-bert.jpg
   width: 800
   height: 500
 
 ---
-
-本次实验将 BERT 模型对 CoLA 任务进行微调训练，获取在不同 Batch size 下，微调任务每 Epoch 所用时间与 GPU 占用情况。
 
 ## 实验环境
 
