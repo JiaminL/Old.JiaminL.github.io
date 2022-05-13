@@ -1,0 +1,28 @@
+@import "_light_dark_color";
+html {
+    @media (prefers-color-scheme: light) {
+        &:not([data-mode]), [data-mode=light] {
+            @include light-scheme;
+        }
+        &[data-mode=dark] {
+            @include dark-scheme;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        &:not([data-mode]),
+        &[data-mode=dark] {
+            @include dark-scheme;
+        }
+        &[data-mode=light] {
+            @include light-scheme;
+        }
+    }
+    font-size: 16px;
+}
+
+#topbar-wrapper {
+    transition: top 0.8s ease-in-out;
+    background-color: var(--topbar-wrapper-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
