@@ -1,0 +1,64 @@
+/* All levels of nav */
+
+nav[data-toggle="toc"] .nav>li>a.active:hover,
+nav[data-toggle="toc"] .nav>li>a.active:focus {
+    border-left: 4px solid #FFA500 !important;
+}
+
+nav[data-toggle="toc"] .nav>li>a:hover,
+nav[data-toggle="toc"] .nav>li>a:focus {
+    color: #FFA500 !important;
+    border-left: 4px solid transparent !important;
+}
+
+nav[data-toggle="toc"] .nav-link.active,
+nav[data-toggle="toc"] .nav-link.active:hover,
+nav[data-toggle="toc"] .nav-link.active:focus {
+    color: #FFA500 !important;
+    border-left: 2px solid #FFA500 !important;
+}
+
+
+/* Nav: second level (shown on .active) */
+
+nav[data-toggle="toc"] .nav .nav>li>a {
+    padding-left: 35px;
+}
+
+nav[data-toggle="toc"] .nav .nav>li>a:hover,
+nav[data-toggle="toc"] .nav .nav>li>a:focus {
+    padding-left: 34px;
+}
+
+nav[data-toggle="toc"] .nav .nav>li>.active,
+nav[data-toggle="toc"] .nav .nav>li>.active:hover,
+nav[data-toggle="toc"] .nav .nav>li>.active:focus {
+    padding-left: 33px;
+}
+
+
+/* Nav: third level (shown on .active) */
+
+nav[data-toggle="toc"] .nav .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 50px;
+    line-height: 1.5rem;
+    font-weight: normal;
+}
+
+nav[data-toggle="toc"] .nav .nav .nav>li>a:hover,
+nav[data-toggle="toc"] .nav .nav .nav>li>a:focus {
+    padding-left: 49px;
+}
+
+nav[data-toggle="toc"] .nav .nav .nav>li>.active,
+nav[data-toggle="toc"] .nav .nav .nav>li>.active:hover,
+nav[data-toggle="toc"] .nav .nav .nav>li>.active:focus {
+    padding-left: 48px;
+    font-weight: 500;
+}
+
+nav[data-toggle="toc"] .nav-link.active+ul {
+    display: block;
+}

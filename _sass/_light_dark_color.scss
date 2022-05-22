@@ -4,4 +4,17 @@
 
 @mixin dark-scheme {
     --topbar-wrapper-bg: #27282bb3;
+
+    nav[data-toggle=toc] .nav-link.active,
+    nav[data-toggle=toc] .nav-link.active:focus,
+    nav[data-toggle=toc] .nav-link.active:hover {
+        color: var(--toc-highlight) !important;
+        border-left-color: var(--toc-highlight) !important;
+    }
+
+    nav[data-toggle=toc] .nav>li>a:focus,
+    nav[data-toggle=toc] .nav>li>a:hover {
+        border-left-color: transparent !important;
+    }
+
 }
